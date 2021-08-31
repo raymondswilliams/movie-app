@@ -1,1 +1,1 @@
-GET https://api.wordnik.com/v4/wordList.json/http%3A%2F%2Flocalhost%3A3000%2Fall_movie?api_key=zoykch8rrpuv19tuv0o2igg7ketsgrcz213sank54les4zjfv
+get http://localhost:3000/movie/3
