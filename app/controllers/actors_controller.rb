@@ -15,8 +15,13 @@ class ActorsController < ApplicationController
 
     )
     actor.save
-    render json: actor
+    if actor.save
+      render json: actor
+    else
+      render json: actor.errors.full_messages, status: :unprocessable_entity
+    end
   end
+  
 
   def show
     actor = Actor.find(params[:id])
