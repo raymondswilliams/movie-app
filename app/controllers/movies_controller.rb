@@ -15,8 +15,13 @@ class MoviesController < ApplicationController
       english: params[:english]
     )
     movie.save
-    render json: movie
+    if movie.save
+      render json: movie
+    else
+      render json: movie.errors.full_messages, status: :unprocessable_entity
+    end
   end
+  
 
   def show
     movie = Movie.find(params[:id])
