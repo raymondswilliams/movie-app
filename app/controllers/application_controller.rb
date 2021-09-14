@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  before_action :authenticate_admin, except: [:index, :show]
+  
 
   def current_user
     auth_headers = request.headers["Authorization"]
