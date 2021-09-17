@@ -1,0 +1,2 @@
+class CartedModel < ApplicationRecord
+end
