@@ -4,7 +4,7 @@ class ActorsController < ApplicationController
   
   def index
     actors = Actor.all
-    render json: actors
+    render json: actors.as_json
     
   end
 
@@ -29,7 +29,7 @@ class ActorsController < ApplicationController
 
   def show
     actor = Actor.find(params[:id])
-    render json: actor
+    render json: actor.to_json
   end
 
   def update

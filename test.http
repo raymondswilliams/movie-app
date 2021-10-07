@@ -1,12 +1,18 @@
-get http://localhost:3000/movie/1
+GET http://localhost:3000/movie
+
+###
+
+GET http://localhost:3000/actor
+
+
 
 ### Users create (signup)
 POST http://localhost:3000/users
 Content-Type: application/json
 
   {
-    "name": "Kirby",
-    "email": "kirby@gmail.com",
+    "name": "Marsha",
+    "email": "marsha@gmail.com",
     "password": "password",
     "password_confirmation": "password"
   }
@@ -15,6 +21,6 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
   {
-    "email": "bob@gmail.com",
+    "email": "marsha@gmail.com",
     "password": "password"
   }
